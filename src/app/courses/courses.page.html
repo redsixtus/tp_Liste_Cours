@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mes Cours</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h2 class="ion-no-margin">Liste de mes cours</h2>
+<ion-list inset="true">
+  <ion-item *ngFor="let cours of mesCours">
+    <!--
+    <ion-label>
+      <h4>{{cours.nom}}</h4>
+      <p>Nb Etudiants : {{cours.nbtud}}</p>
+    </ion-label>
+    -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          {{cours.nom}}
+        </ion-card-title>
+        <ion-card-subtitle>
+          Présentiel
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Nb Etudiants : {{cours.nbtud}}
+        <p>
+          <a routerLink="/home"> vers le Menu </a>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-list>
+</ion-content>
